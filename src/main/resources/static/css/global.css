@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+html{
+    --blue-black: #2C2C54;
+    --blue: #464686;
+    --rose: #FAEDCD;
+    --botton-bg-color: #D4A373;
+    --background: #FEFAE0;
+    --overlay: #000b1d;
+    --background-div: #FAEDCD;
+    --header-color: #E9EDC9;
+    --header-bg-color:#E9EDC9;
+
+    
+
+    --grey-dark: #4D5E77;
+    --grey-blue: #A1B2CD;
+    --grey-light:#E5EAF1;
+    --grey-medium: #EAECF2;
+
+    /* 1rem = 16px (User Agent) = 100% (User Agent) */
+    font-size: 62.5% /* 10px */
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    background-color: var(--background);
+
+}
+
+body, button, input, textarea{
+    /*clamp = intervalo de tamanho*/
+    /*
+    * menor tamanho da letra = 14px
+    * padrão = 1.6 rem
+    * tamanho maximo = 2vw
+    */
+    /* intervalo de tamanho */
+    font-size: clamp(14px, 1.6rem, 2vw);
+
+    font-family: 'Castoro', serif;
+    /*font-family: 'Dela Gothic One', cursive;
+    font-family: 'Rock Salt', cursive;
+    */
+}
+
+.content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.sr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+/*--------- input and buttons*/
+a, input, button, .button{
+    border-radius: .8rem;
+    height: 5rem;
+}
+
+button, .button{
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--blue);
+    color: var(--white);
+
+    transition: filter .2s;
+
+    cursor: pointer;
+}
+
+a, button:hover, .button:hover{
+    filter: brightness(1.2);
+}
+
+a, button > img, .button > img{
+    margin-right: 1rem;
+    width: 2rem;
+}
+
+a, button.outlined, .button.outlined{
+    background: var(--botton-bg-color);
+    color: var(--blue);
+    border: .2rem solid var(--blue);
+}
+
+a, button.red, .button.red{
+    background: var(--red);
+    color: var(--white);
+}
+
+a, button.grey, .button.grey{
+    background: var(--grey-light);
+    color: var(--grey-dark);
+}
+
+/** HEADER
+
+.content header{
+    background-color:var(--header-color);
+    height: 101px;
+    width: 100%;
+    left: 0px;
+    top: -10px;
+    border-radius: 0px;
+}
+
+.content header img{
+    width: 16.7rem;
+}
