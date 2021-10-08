@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
+      html xmlns:th="http://thymeleaf.org">
     <head>
         <title>Workflix</title>
         <meta charset="UTF-8" />
@@ -13,19 +14,19 @@
 
 
         <!-- Custom styles for this template -->
-        <link href="/src/main/resources/static/css/style.css" rel="stylesheet" />
-        <link href="/src/main/resources/static/css/global.css" rel="stylesheet" />
+        <link href="/css/style.css" rel="stylesheet" />
+        <link href="/css/global.css" rel="stylesheet" />
     </head>
     <body>
         <div class="content">
             <header>
                 <nav>
-                    <img src="/src/main/resources/static/img/logo.png" alt="">
+                        <img src="/img/logosup.svg" alt="Workflix Logo"/>
                 </nav>
             </header>
 
             <div id="cols-img"> 
-                <img src="/src/main/resources/static/img/home.jpg" alt="">
+                <img src="/img/home.svg" alt="">
             </div>
 
                               
@@ -35,8 +36,8 @@
                         <h1>Sua proxima oportunidade está aqui</h1>
                         <h2>Cadastre seu currículo e tenha as melhores empresas a sua procura</h2>
 
-                        <a href="/login">Atualizar</a>
-                        <a href="/new-user" id="cadastrar">Cadastrar</a>
+                        <a href="/user/login">Atualizar</a>
+                        <a href="/user/new-user" id="cadastrar">Cadastrar</a>
                     </div>
 
                     <div class="cols-caixa">
@@ -50,7 +51,7 @@
             </main> 
             <footer>
                 <nav>
-                    <img src="/src/main/resources/static/img/logo.png" alt="">
+                    <img src="/img/logoinf.svg" alt="">
                 </nav>
             </footer>   
         </div>

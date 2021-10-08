@@ -13,8 +13,6 @@
     height: 100%;
 }
 .content header nav{
-    background-color: var(--header-color);
-    color: var(--header-color);
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -23,8 +21,10 @@
     padding-top: 5rem;
 }
 .content header nav img{
-    width: 21rem;
-    height: 21rem;
+    width: 30rem;
+    height: 32rem;
+    margin-top: 21rem;
+    margin-left: -4rem;
 }
 
 #cols-img{
@@ -34,19 +34,21 @@
 #cols-img img{
     width: 100%;
     height: 100%;
+    margin-top: -6rem;
+    margin-bottom: -10rem;
 }
 
 main{
     grid-area: right;
     align-items: center;
-    align-items: center;
-    margin-top: 1rem;
+
 }
 main .container{
-    width: min(45rem, 100%);
+    width: 90%;
 }
 main .cols-caixa{ 
-    width: 98%;
+    width: 100%;
+    height: 20rem;
     margin: 0rem 1rem;
     background-color: var(--background-div);
     border-radius: 0px 60px 18px;
@@ -55,7 +57,7 @@ main .cols-caixa{
 }
 
 .cols-caixa h1{
-    font-size: clamp(13px, 3vw, 2.8rem);
+    font-size: clamp(13px, 3vw, 3.8rem);
     font-family: 'Poppins', sans-serif;
     font-weight: 800;
     text-align: center;
@@ -65,12 +67,12 @@ main .cols-caixa{
     justify-content: center;
 }
 .cols-caixa h2{
-    font-size: clamp(8px, 2vw, 1rem);
+    font-size: clamp(8px, 2vw, 2rem);
 
     font-family: 'Poppins', sans-serif;
     font-style: normal;
     font-weight: bold;
-    line-height: 3,3rem;
+    line-height: 3.3rem;
     text-align: center;
     color: var(--blue);
     margin-bottom: 2rem;
@@ -81,25 +83,26 @@ main .cols-caixa{
 }
 .cols-caixa a{
     display: inline-block;
-    width: 17rem;
+    width: 40%;
+    height: 8rem;
     align-items: center;
     background-color: var(--botton-bg-color);
     border-radius: 29px;
-    margin-left: 5rem;
+    margin-left: 8rem;
     font-family: Rockwell,'Poppins', sans-serif;
     font-style: normal;
-    font-weight: bold;
     color: #FFFFFF;
-    font-size: clamp(13px, 3vw, 2.8rem);
+    font-size: clamp(13px, 3vw, 4.4rem);
     font-weight: 800;
     text-align: center;
+    padding-top: 1.5rem;
 }
 
 #cadastrar{
     margin-left: 1rem;
 }
 #buscar{
-    margin-left: 14rem;
+    margin-left: 25rem;
 }
 
 footer{
@@ -111,13 +114,12 @@ footer{
     color: var(--header-color);
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: .4rem;
     height: 100%;
-    margin-bottom: -8rem;
-    padding-top: 5rem;
+
 }
 .content footer nav img{
-    padding-top: 3rem;
-    width: 31rem;
+    margin-bottom: 29.2rem;
+    width: 27rem;
     height: 41rem;
 }

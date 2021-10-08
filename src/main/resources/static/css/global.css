@@ -10,7 +10,7 @@ html{
     --blue-black: #2C2C54;
     --blue: #464686;
     --rose: #FAEDCD;
-    --botton-bg-color: #D4A373;
+    --botton-bg-color: #ecaf75;
     --background: #FEFAE0;
     --overlay: #000b1d;
     --background-div: #FAEDCD;
@@ -70,7 +70,7 @@ body, button, input, textarea{
 
 
 /*--------- input and buttons*/
-a, input, button, .button{
+input, button, .button{
     border-radius: .8rem;
     height: 5rem;
 }
@@ -92,27 +92,27 @@ button, .button{
     cursor: pointer;
 }
 
-a, button:hover, .button:hover{
+button:hover, .button:hover{
     filter: brightness(1.2);
 }
 
-a, button > img, .button > img{
+button > img, .button > img{
     margin-right: 1rem;
     width: 2rem;
 }
 
-a, button.outlined, .button.outlined{
+button.outlined, .button.outlined{
     background: var(--botton-bg-color);
     color: var(--blue);
-    border: .2rem solid var(--blue);
+    border: .2rem solid #ECAF75FF;
 }
 
-a, button.red, .button.red{
-    background: var(--red);
-    color: var(--white);
+button.red, .button.red{
+    background: #dc4949;
+    color: white;
 }
 
-a, button.grey, .button.grey{
+button.grey, .button.grey{
     background: var(--grey-light);
     color: var(--grey-dark);
 }
