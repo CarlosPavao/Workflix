@@ -16,15 +16,21 @@ public class UsuarioController {
         return "/usuario/login";
     }
 
+    @GetMapping("/dashboard")
+        public String Dashboard(){
+            return "/usuario/dashboard";
+        }
+
+
     @GetMapping("/cadastrar")
     public String Cadastrar() {
-        return "/Usuario/newUser";
+        return "/usuario/newUser";
     }
 
 
     @GetMapping("/listar")
     public String Listar() {
-        return "/funcionario/lista";
+        return "/usuario/lista";
     }
 
 
