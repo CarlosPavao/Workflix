@@ -22,7 +22,7 @@ public class UsuarioController {
         }
 
 
-    @GetMapping("/cadastrar")
+    @GetMapping("/new-user")
     public String Cadastrar() {
         return "/usuario/newUser";
     }

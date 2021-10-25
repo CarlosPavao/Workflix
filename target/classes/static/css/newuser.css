@@ -1,0 +1,13 @@
+.content{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 6rem 1fr 10rem;
+    height: 100%;
+    grid-template-areas:
+    'header header'
+    'center center'
+    "footer footer"
+}
+.content #forms{
+    grid-area: center;
+}
