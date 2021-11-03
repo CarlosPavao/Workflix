@@ -4,12 +4,12 @@ import lombok.*;
 
 import javax.persistence.*;
 
+@SuppressWarnings("serial")
 @Getter
 @Setter
-@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
-@SuppressWarnings("serial")
+@EqualsAndHashCode
 @Entity
 @Table(name= "ENDERECOS")
 public class Endereco extends AbstractEntity<Long>{

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Novo Candidato</title>
     <meta charset="UTF-8" />
@@ -23,23 +23,114 @@
     </header>
 
     <div id="forms">
-        <form><h1>Cadastrar currículo</h1>
-            <fieldset>
-                <label for="turma" id="textcolor" >Nome:</label>
-                <input type="text" name="turma" id="nome" className="nome" placeholder="Digite seu nome">
-                <br>
-                <label><img src="/img/telephone.svg"></label>
-                <input type="text" name="turma" id="telphone" className="nome" placeholder="Digite o telefone">
-                <br>
-                <label><img src="/img/cellphone.svg"></label>
-                <input type="text" name="turma" id="cellphone" className="nome" placeholder="Digite o celular">
-                <br>
-                <label><img src="/img/e-mail.svg"></label>
-                <input type="text" name="turma" id="email" className="nome" placeholder="Digite o e-mail">
-                <br>
-                <label><img src="/img/linkedin-forms.svg"></label>
-                <input type="text" name="turma" id="linkedin" className="nome" placeholder="Digite o linkedin">
-                <br>
+        <form action="#" th:action="@{/user/salvar}" th:method="POST">
+            <h1>Cadastrar currículo</h1>
+                <div class="form-group">
+                    <fieldset>
+                    <label id="textcolor" >Nome:</label>
+                    <input type="text" th:field="${usuario.nome}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >sobreNome:</label>
+                    <input type="text" th:field="${usuario.sobrenome}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >cpf:</label>
+                    <input type="text" th:field="${usuario.cpf}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >senha:</label>
+                    <input type="password" th:field="${usuario.senha}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >data:</label>
+                    <input type="date" th:field="${usuario.dataNascimento}" placeholder="Digite seu nome">
+                    <br>
+                    <label><img src="/img/telephone.svg"></label>
+                    <input type="text" th:field="${usuario.telefone}" placeholder="Digite o telefone">
+                    <br>
+                    <label><img src="/img/cellphone.svg"></label>
+                    <input type="text" th:field="${usuario.celular}"placeholder="Digite o celular">
+                    <br>
+                    <label><img src="/img/e-mail.svg"></label>
+                    <input type="text" th:field="${usuario.email}" placeholder="Digite o e-mail">
+                    <br>
+                    <label><img src="/img/linkedin-forms.svg"></label>
+                    <input type="text" th:field="${usuario.linkedin}" placeholder="Digite o linkedin">
+                    <br>
+                <div class="form-group">
+                    <label id="textcolor" >Rua:</label>
+                    <input type="text" th:field="${endereco.logradouro}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >numero:</label>
+                    <input type="text" th:field="${endereco.numero}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >bairro:</label>
+                    <input type="text" th:field="${endereco.bairro}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >cidade:</label>
+                    <input type="text" th:field="${endereco.cidade}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >bairro:</label>
+                    <input type="text" th:field="${endereco.bairro}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >cep:</label>
+                    <input type="text" th:field="${endereco.cep}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >uf:</label>
+                    <input type="text" th:field="${endereco.uf}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >uf:</label>
+                    <input type="text" th:field="${endereco.uf}" placeholder="Digite seu nome">
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label id="textcolor" >instituição:</label>
+                    <input type="text" th:field="${formacao.instituicao}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >curso:</label>
+                    <input type="text" th:field="${formacao.curso}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >nivel:</label>
+                    <input type="text" th:field="${formacao.nivel}" placeholder="Digite seu nome">
+                    <br>
+                    <br>
+                    <label id="textcolor" >Data Inicio:</label>
+                    <input type="date" th:field="${formacao.nivel}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Data saida:</label>
+                    <input type="date" th:field="${formacao.dataTermino}" placeholder="Digite seu nome">
+                    <br>
+                </div>
+                <div class="form-group">
+                    <label id="textcolor" >empresa:</label>
+                    <input type="text" th:field="${experiencia.empresa}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >cargo:</label>
+                    <input type="text" th:field="${experiencia.cargo}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Atividade:</label>
+                    <input type="text" th:field="${experiencia.atividades}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Data Inicio:</label>
+                    <input type="date" th:field="${experiencia.dataInicio}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Data saida:</label>
+                    <input type="date" th:field="${experiencia.dataTermino}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >empresa:</label>
+                    <input type="text" th:field="${experiencia.empresa}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >cargo:</label>
+                    <input type="text" th:field="${experiencia.cargo}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Atividade:</label>
+                    <input type="text" th:field="${experiencia.atividades}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Data Inicio:</label>
+                    <input type="date" th:field="${experiencia.dataInicio}" placeholder="Digite seu nome">
+                    <br>
+                    <label id="textcolor" >Data saida:</label>
+                    <input type="date" th:field="${experiencia.dataTermino}" placeholder="Digite seu nome">
+                    <br>
+                </div>
+                <!--
                 <label><img src="/img/github-forns.svg"></label>
                 <input type="text" name="turma" id="github" className="nome" placeholder="Digite o github">
                 <br>
@@ -48,13 +139,14 @@
                 <br>
 
 
-            </fieldset>
-            <fieldset>
+                </fieldset>
+                <fieldset>
 
+                </fieldset>
+                -->
             </fieldset>
+            <button type="submit">Adicionar</button>
         </form>
-
-
     </div>
     </main>
     <footer>

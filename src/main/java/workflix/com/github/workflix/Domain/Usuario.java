@@ -1,18 +1,22 @@
 package workflix.com.github.workflix.Domain;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+
 import org.hibernate.validator.constraints.br.CPF;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 @SuppressWarnings("serial")
 @Entity
 @Table(name= "USUARIO")
-@Data
 public class Usuario extends AbstractEntity<Long> {
     @Column(nullable= false)
     private String nome;
@@ -37,7 +41,7 @@ public class Usuario extends AbstractEntity<Long> {
 
     private String telefone;
 
-    @Column(nullable = false, length = 15)
+    @Column(length = 15)
     private String celular;
 
     private String facebook;
@@ -50,13 +54,13 @@ public class Usuario extends AbstractEntity<Long> {
     @JoinColumn(name = "endereco_ID")
     private Endereco endereco;
 
-    @ManyToOne
-    @JoinColumn(name = "experiencia_ID")
-    private Experiencia experiencia;
+    @OneToMany (cascade=CascadeType.ALL)
+    @JoinColumn(name="id_experiencia_fk")
+    private List<Experiencia> experiencias;
 
-    @ManyToOne
-    @JoinColumn(name = "formacao_ID")
-    private Formacao formacao;
+    @OneToMany (cascade=CascadeType.ALL)
+    @JoinColumn(name="id_formacao_fk")
+    private List<Formacao> formacoes;
 
 
 
