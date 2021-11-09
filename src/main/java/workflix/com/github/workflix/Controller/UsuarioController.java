@@ -50,11 +50,9 @@ public class UsuarioController {
         enderecoRepository.save(endereco);
         usuario.setEndereco(endereco);
 
-        formacao.setUsuario(usuario);
         formacaoRepository.save(formacao);
-
-        experiencia.setUsuario(usuario);
-        experienciaRepository.save(experiencia);
+        
+        experienciaRepository.save(experiencia.);
 
 
 

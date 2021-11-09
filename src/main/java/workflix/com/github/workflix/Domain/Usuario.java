@@ -16,7 +16,7 @@ import java.util.List;
 @EqualsAndHashCode
 @SuppressWarnings("serial")
 @Entity
-@Table(name= "USUARIO")
+@Table(name= "CANDIDATOS")
 public class Usuario extends AbstractEntity<Long> {
     @Column(nullable= false)
     private String nome;
@@ -50,16 +50,14 @@ public class Usuario extends AbstractEntity<Long> {
 
     private String github;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "endereco_ID")
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="endereco_id")
     private Endereco endereco;
 
-    @OneToMany (cascade=CascadeType.ALL)
-    @JoinColumn(name="id_experiencia_fk")
+    @OneToMany (mappedBy = "usuario")
     private List<Experiencia> experiencias;
 
-    @OneToMany (cascade=CascadeType.ALL)
-    @JoinColumn(name="id_formacao_fk")
+    @OneToMany (mappedBy = "usuario")
     private List<Formacao> formacoes;
 
 

@@ -34,6 +34,6 @@ public class Experiencia extends AbstractEntity<Long> {
     private LocalDate dataTermino;
 
     @ManyToOne
-    @JoinColumn(name = "id_usuario_fk")
+    @JoinColumn(name = "usuario_id_fk")
     private Usuario usuario;
 }
