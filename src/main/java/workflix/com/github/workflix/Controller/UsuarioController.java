@@ -52,9 +52,7 @@ public class UsuarioController {
 
         formacaoRepository.save(formacao);
         
-        experienciaRepository.save(experiencia.);
-
-
+        experienciaRepository.save(experiencia);
 
         usuarioRepository.save(usuario);
 
